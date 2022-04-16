@@ -139,10 +139,20 @@ a {
     padding: 0;
     z-index: 2;
 }
-@media (min-width: 768px) {
-    .container .list > i {
-        display: none;
-    }    
+.home ul a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 40px 10px;
+    border-bottom: 1px solid transparent;
+}
+.home ul a:hover {
+    color: var(--main-color);
+    border-bottom-color: var(--main-color);
+}
+.home .container i {
+    font-size: 20px;
+    color: white;
 }
 @media (max-width: 767px) {
     .home .container ul {
@@ -165,16 +175,10 @@ a {
         padding: 15px;
     }
 }
-.home ul a {
-    display: block;
-    color: white;
-    font-size: 14px;
-    padding: 40px 10px;
-    border-bottom: 1px solid transparent;
-}
-.home ul a:hover {
-    color: var(--main-color);
-    border-bottom-color: var(--main-color);
+@media (min-width: 768px) {
+    .container .list > i {
+        display: none;
+    }    
 }
 .home .container .search {
     width: 40px;
@@ -182,10 +186,6 @@ a {
     margin-left: 30px;
     border-left: 1px solid white;
     justify-content: flex-end;
-}
-.home .container i {
-    font-size: 20px;
-    color: white;
 }
 .home .inf {
     display: flex;
@@ -736,9 +736,6 @@ a {
     .subscribe .container {
         flex-direction: column;
     }
-    .subscribe .container p {
-        margin: 30px 0 0;
-    }
 }
 .subscribe .container form input[type="email"] {
     background: none;
@@ -775,6 +772,11 @@ a {
 .subscribe .container p {
     margin-left: 50px;
     line-height: 2;
+}
+@media (max-width:991px) {
+    .subscribe .container p {
+        margin: 30px 0 0;
+    }
 }
 /* End Subscribe */
 /* Start Contact */
@@ -818,6 +820,12 @@ a {
 }
 .contact .container .content .text {
     flex-basis: 25%;
+}
+@media (max-width: 767px) {
+    .contact .content .text {
+        text-align: center;
+        order: -1;
+    }
 }
 .contact .container .content .text h4:not(:first-child) {
     margin: 90px 0 30px;
