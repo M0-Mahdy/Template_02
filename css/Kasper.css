@@ -236,7 +236,7 @@ a {
 .home i.right {
     right: 30px;
 }
-.bullets {
+.home .bullets {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -261,11 +261,6 @@ a {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-.services .container .down {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 40px;
-}
 .down .cont .text h3 {
     color: var(--main-color);
     margin: 0 0 30px;
@@ -273,11 +268,30 @@ a {
 .services .down .cont {
     display: flex;
 }
-.services .down .cont:first-child {
-    margin-bottom: 60px;
+@media (max-width: 767px) {
+    .services .down .cont {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .services .container .down {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 40px;
+    }
+    .services .down .cont:first-child {
+        margin-bottom: 60px;
+    }
 }
 .services .down .cont i {
     margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .services .down .cont i {
+        margin: 0 0 30px;
+    }
 }
 .services .down .cont .text p {
     color: rgb(119, 119, 119);
@@ -520,18 +534,19 @@ a {
 .our-skills .container {
     flex-wrap: wrap;
 }
-.our-skills .container .testimonials,
-.our-skills .container .skills {
-    position: relative;
-    flex-basis: 45%;
+@media (min-width: 991px) {
+    .our-skills .container .testimonials,
+    .our-skills .container .skills {
+        flex-basis: 45%;
+    }
 }
-.our-skills .container > div h3 {
+.our-skills .container>div h3 {
     margin: 0 0 30px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
 }
-.our-skills .container > div > p {
+.our-skills .container>div>p {
     color: #777;
     margin: 0 0 60px;
     text-align: center;
@@ -539,6 +554,12 @@ a {
 }
 .our-skills .container .testimonials .cont {
     margin: 0 0 30px;
+}
+@media (max-width: 767px) {
+    .our-skills .container .testimonials .cont {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .our-skills .container .testimonials .cont .text {
     border-bottom: 1px solid #ccc;
@@ -556,9 +577,14 @@ a {
     margin-right: 50px;
     border-radius: 50%;
 }
+@media (max-width: 767px) {
+    .our-skills .container .testimonials .cont img {
+        margin: 0 auto 20px;
+    }
+}
 .our-skills .container .testimonials .bullets {
     margin: 50px 0;
-    bottom: 0;
+    text-align: center;
 }
 .our-skills .container .testimonials .bullets span {
     border-color: #aaa;
