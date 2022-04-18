@@ -19,6 +19,10 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
 }
+.padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
 .space-between {
     display: flex;
     justify-content: space-between;
@@ -56,6 +60,11 @@ body {
 }
 /* End Global Rules  */
 /* Start Components */
+div[style] {
+    background-image: var(--background);
+    background-size: cover;
+    position: relative;
+}
 .dark {
     background-color: rgba(0 0 0 / 60%);
     width: 100%;
@@ -65,6 +74,9 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+}
+ul {
+    list-style: none;
 }
 a {
     text-decoration: none;
@@ -111,10 +123,7 @@ a {
 /* End Components */
 /* Start Home */
 .home {
-    background-image: url(https://h.top4top.io/p_2293i7u3x1.jpg);
-    background-size: cover;
     min-height: 100vh;
-    position: relative;
 }
 .home .container {
     min-height: 97px;
@@ -133,10 +142,7 @@ a {
     height: 40px;
 }
 .home .container ul {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
     z-index: 2;
 }
 .home ul a {
@@ -165,11 +171,10 @@ a {
         display: flex;
         flex-direction: column;
         background-color: rgb(0 0 0 / 50%);
+        width: 100%;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        z-index: 2;
     }
     .list > i:hover + ul a {
         padding: 15px;
@@ -193,8 +198,7 @@ a {
     background-color: var(--secondary-color);
     color: white;
     width: 50%;
-    padding: 50px;
-    padding-left: 70px;
+    padding: 50px 50px 50px 70px;
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
@@ -216,7 +220,6 @@ a {
 }
 .home .inf p {
     font-size: 14px;
-    margin: 0;
     line-height: 2;
 }
 .home > i {
@@ -257,10 +260,6 @@ a {
 }
 /* End Landing */
 /* Start Services */
-.services {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-}
 .down .cont .text h3 {
     color: var(--main-color);
     margin: 0 0 30px;
@@ -295,17 +294,12 @@ a {
 }
 .services .down .cont .text p {
     color: rgb(119, 119, 119);
-    margin: 0;
     line-height: 2;
 }
 /* End Services */
 /* Start Design */
 .design {
-    padding: var(--main-padding);
-    background-image: url(https://a.top4top.io/p_2283cojbf1.jpg);
-    background-size: cover;
     height: 600px;
-    position: relative;
     overflow: hidden;
 }
 .design .text {
@@ -331,11 +325,6 @@ a {
     font-weight: normal;
     text-transform: uppercase;
 }
-.design .text ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 .design .text li {
     padding: 15px 0;
 }
@@ -347,12 +336,7 @@ a {
 }
 /* End Design */
 /* Start PORTFOLIO */
-.port {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-}
 .port .container ul {
-    list-style: none;
     display: flex;
     justify-content: center;
 }
@@ -409,7 +393,6 @@ a {
 }
 .card .caption p {
     color: var(--main-color);
-    margin: 0;
 }
 .more {
     display: block;
@@ -476,12 +459,7 @@ a {
 /* End About */
 /* Start Stats */
 .stats {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-    background-image: url(https://c.top4top.io/p_2286jur2b1.png);
-    background-size: cover;
     text-align: center;
-    position: relative;
 }
 .stats .dark {
     background-color: rgba(0 0 0 / 70%);
@@ -527,10 +505,6 @@ a {
 }
 /* End Stats */
 /* Start Skills */
-.our-skills {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-}
 .our-skills .container {
     flex-wrap: wrap;
 }
@@ -593,7 +567,6 @@ a {
 }
 .our-skills .container .skills .skill-bar .bar {
     height: 30px;
-    width: 100%;
     margin: 0 0 40px;
     position: relative;
     background-image: linear-gradient(to right, var(--main-color) 90%, #dedadc 10%);
@@ -640,13 +613,6 @@ a {
 }
 /* End Skills */
 /* Start Quote */
-.quote {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-    background-image: url(https://h.top4top.io/p_22928kpw31.jpg);
-    background-size: cover;
-    position: relative;
-}
 .quote .dark {
     background-color: rgb(0 0 0 / 75%);
 }
@@ -662,10 +628,6 @@ a {
 }
 /* End Quote */
 /* Start Pricing */
-.pricing {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-}
 .pricing .container .plans {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -705,7 +667,6 @@ a {
     right: -15px;
 }
 .pricing .container .plans .plan ul {
-    list-style: none;
     border-bottom: 1px solid var(--main-color);
 }
 .pricing .container .plans .plan ul li {
@@ -745,12 +706,7 @@ a {
 /* End pricing */
 /* Start SubScribe */
 .subscribe {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
     color: white;
-    background-image: url(https://a.top4top.io/p_22931i5b71.jpg);
-    background-size: cover;
-    position: relative;
 }
 .subscribe .dark {
     background-color: rgba(0 0 0 / 50%);
@@ -806,10 +762,6 @@ a {
 }
 /* End Subscribe */
 /* Start Contact */
-.contact {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-}
 @media (max-width: 767px) {
     .contact .content {
         flex-direction: column;
@@ -876,11 +828,8 @@ a {
 .footer {
     padding-top: calc(var(--section-padding) / 2);
     padding-bottom: calc(var(--section-padding) / 2);
-    background-image: url(https://d.top4top.io/p_2293uxayy1.jpg);
-    background-size: cover;
     color: white;
     text-align: center;
-    position: relative;
 }
 .footer .dark {
     background-color: rgb(0 0 0 / 70%);
